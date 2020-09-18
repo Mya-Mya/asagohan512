@@ -13,7 +13,7 @@ function App(props) {
     <Grid container>
       <Grid item xs={1} />
       <Grid item xs={10}>
-        <AboutMe/>
+        <AboutMe />
         <Header />
         <Survey />
         <Result />

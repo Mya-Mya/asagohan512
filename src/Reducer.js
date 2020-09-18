@@ -96,9 +96,9 @@ const initialState = {
         byId: {},
         allIds: []
     },
-    ui:{
-        aboutMe:{
-            open:false
+    ui: {
+        aboutMe: {
+            open: false
         }
     }
 }
@@ -107,25 +107,25 @@ export const Reducer = (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
         case ActionType.OPEN_ABOUTME:
-            return{
+            return {
                 ...state,
-                ui:{
+                ui: {
                     ...state.ui,
-                    aboutMe:{
+                    aboutMe: {
                         ...state.ui.aboutMe,
-                        open:true
+                        open: true
                     }
                 }
             }
             break;
         case ActionType.CLOSE_ABOUTME:
-            return{
+            return {
                 ...state,
-                ui:{
+                ui: {
                     ...state.ui,
-                    aboutMe:{
+                    aboutMe: {
                         ...state.ui.aboutMe,
-                        open:false
+                        open: false
                     }
                 }
             }

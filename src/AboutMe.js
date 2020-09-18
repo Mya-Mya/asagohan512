@@ -1,16 +1,16 @@
-import { DialogContent, DialogTitle,Dialog, Typography, DialogActions, Button } from '@material-ui/core';
+import { DialogContent, DialogTitle, Dialog, Typography, DialogActions, Button } from '@material-ui/core';
 import React from 'react';
 import { connect } from 'react-redux';
 import ActionType from './ActionType';
 
-const AboutMe=(props)=>{
+const AboutMe = (props) => {
     return <Dialog open={props.ui.aboutMe.open}>
         <DialogTitle>
             <Typography variant="h4" color="primary">
                 あさごはん512
             </Typography>
         </DialogTitle>
-        <DialogContent　dividers>
+        <DialogContent dividers>
             <Typography gutterBottom={false}>
                 9つの2択質問を答えて512通りの中から今日のあさごはんを決めましょう。React, Material-UI, Redux, React-Reduxを使用しています。
             </Typography>
@@ -27,14 +27,14 @@ const AboutMe=(props)=>{
     </Dialog>
 }
 
-const mapStateToProps=state=>state
-const mapDispatchToProps=dispatch=>({
-    close:()=>{
-        const action={
-            type:ActionType.CLOSE_ABOUTME,
-            payload:{}
+const mapStateToProps = state => state
+const mapDispatchToProps = dispatch => ({
+    close: () => {
+        const action = {
+            type: ActionType.CLOSE_ABOUTME,
+            payload: {}
         }
         dispatch(action);
     }
 })
-export default connect(mapStateToProps,mapDispatchToProps)(AboutMe);
+export default connect(mapStateToProps, mapDispatchToProps)(AboutMe);

@@ -1,4 +1,4 @@
-import { createMuiTheme ,ThemeProvider} from '@material-ui/core';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,31 +7,31 @@ import App from './components/App';
 import './index.css'
 import { Reducer } from './Reducer';
 
-const theme=createMuiTheme({
-  palette:{
-    primary:{
-      main:"#FFB900",
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#FFB900",
     },
-    secondary:{
-      main:"#720087",
+    secondary: {
+      main: "#720087",
     },
-    text:{
-      primary:"#000000",
-      secondary:"#ffffff"
+    text: {
+      primary: "#000000",
+      secondary: "#ffffff"
     }
   },
-  typography:{
-    fontFamily:"Kosugi Maru",
-    h2:{
-      fontSize:"2.8rem",
+  typography: {
+    fontFamily: "Kosugi Maru",
+    h2: {
+      fontSize: "2.8rem",
     },
-    body1:{
-      fontSize:"1.4rem"
+    body1: {
+      fontSize: "1.4rem"
     }
   }
 })
 
-const store=createStore(Reducer)
+const store = createStore(Reducer)
 
 ReactDOM.render(
   <React.StrictMode>
